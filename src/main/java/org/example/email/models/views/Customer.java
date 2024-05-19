@@ -1,4 +1,4 @@
-package org.example.email.models;
+package org.example.email.models.views;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import jakarta.persistence.Entity;
@@ -9,7 +9,6 @@ import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.email.views.Views;
 import org.hibernate.validator.constraints.Length;
 
 @Entity

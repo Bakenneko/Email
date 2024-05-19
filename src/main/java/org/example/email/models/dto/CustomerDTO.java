@@ -1,4 +1,4 @@
-package org.example.email.dto;
+package org.example.email.models.dto;
 
 
 import lombok.AllArgsConstructor;

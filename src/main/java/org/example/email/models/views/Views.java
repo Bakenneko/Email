@@ -1,4 +1,4 @@
-package org.example.email.views;
+package org.example.email.models.views;
 
 public class Views {
     public static class Client {

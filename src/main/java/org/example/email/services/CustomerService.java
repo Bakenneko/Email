@@ -1,11 +1,16 @@
 package org.example.email.services;
 
+import lombok.AllArgsConstructor;
 import org.example.email.dao.CustomerDAO;
-import org.example.email.models.Customer;
+import org.example.email.models.views.Customer;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+@Service
+@AllArgsConstructor
 
 public class CustomerService {
 
@@ -14,11 +19,8 @@ public class CustomerService {
     private MailService mailService;
 
     public void save(Customer customer) {
-        if (customer.getId() > 0) {
-            customerDAO.save(customer);
-        } else {
-           throw new RuntimeException("id < 0, can't be empty");
-        }
+
+        customerDAO.save(customer);
         mailService.send(customer.getEmail());
     }
 

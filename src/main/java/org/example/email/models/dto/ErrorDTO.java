@@ -1,13 +1,12 @@
-package org.example.email.dto;
+package org.example.email.models.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
-@Data
 @NoArgsConstructor
-
+@Data
 public class ErrorDTO {
 
     private int code;
