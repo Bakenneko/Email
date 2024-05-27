@@ -21,7 +21,7 @@ public class CustomerService {
     public void save(Customer customer) {
 
         customerDAO.save(customer);
-        mailService.send(customer.getEmail());
+        mailService.send(customer);
     }
 
     public ResponseEntity<List<Customer>> customerListByName(String name) {
